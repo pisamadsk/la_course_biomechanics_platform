@@ -18,9 +18,8 @@ WORKDIR /app
 COPY package.json package-lock.json* pnpm-lock.yaml* ./
 
 # Install Node.js dependencies
-# Check if pnpm-lock.yaml exists to decide install method, but for simplicity we assume npm/yarn/pnpm based on lockfile presence
-# Since pnpm-lock.yaml is present in the file list I saw earlier:
-RUN npm install -g pnpm && pnpm install
+# Switched to npm for better stability in constrained environments
+RUN npm install
 
 # Copy Python requirements
 COPY requirements.txt ./
