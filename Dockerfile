@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     libsm6 \
     libxext6 \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
@@ -20,7 +21,8 @@ COPY package.json ./
 # Install Node.js dependencies
 # Switched to npm for better stability in constrained environments
 # We only copy package.json to avoid lockfile conflicts/issues
-RUN npm install
+# Use --legacy-peer-deps to avoid conflicts with React 19 RC/Beta versions
+RUN npm install --legacy-peer-deps
 
 # Copy Python requirements
 COPY requirements.txt ./
