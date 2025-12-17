@@ -88,6 +88,7 @@ def analyze_video(video_path, output_dir):
         if not out.isOpened():
              print("DEBUG: avc1 codec failed, trying vp80 (WebM)", file=sys.stderr)
              current_video_output = os.path.join(output_dir, "annotated_video.webm")
+             video_output = current_video_output
              fourcc = cv2.VideoWriter_fourcc(*"vp80")
              out = cv2.VideoWriter(current_video_output, fourcc, fps, (width, height))
              
