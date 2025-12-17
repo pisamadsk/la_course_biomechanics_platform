@@ -5,12 +5,8 @@ services:
     plan: free
     dockerContext: .
     envVars:
-      - key: DATABASE_URL
-        sync: false
       - key: JWT_SECRET
         generateValue: true
-      - key: OAUTH_SERVER_URL
-        sync: false
       - key: NODE_ENV
         value: production
       - key: ENABLE_LOCAL_STORAGE
@@ -19,7 +15,4 @@ services:
         value: "true"
       - key: PORT
         value: 3000
-    disk:
-      name: uploads
-      mountPath: /app/dev_uploads
-      sizeGB: 1
+# Disk removed for free tier compatibility - version 2
