@@ -1,0 +1,16 @@
+{
+  "duration": 26.133333333333333,
+  "frame_count": 784,
+  "fps": 30.0,
+  "avg_knee_angle_right": 131.80905612244896,
+  "avg_knee_angle_left": 136.3297448979592,
+  "avg_hip_angle_right": 160.24839285714285,
+  "avg_hip_angle_left": 163.7598341836735,
+  "avg_ankle_angle_right": 141.19604591836733,
+  "avg_ankle_angle_left": 136.20213010204083,
+  "avg_knee_asymmetry": 16.428801020408162,
+  "min_knee_angle_right": 87.15,
+  "max_knee_angle_right": 170.19,
+  "min_knee_angle_left": 88.51,
+  "max_knee_angle_left": 177.85
+}
