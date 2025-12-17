@@ -15,10 +15,11 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy package files
-COPY package.json package-lock.json* pnpm-lock.yaml* ./
+COPY package.json ./
 
 # Install Node.js dependencies
 # Switched to npm for better stability in constrained environments
+# We only copy package.json to avoid lockfile conflicts/issues
 RUN npm install
 
 # Copy Python requirements
