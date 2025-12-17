@@ -19,7 +19,5 @@ services:
         value: "true"
       - key: PORT
         value: 3000
-    disk:
-      name: uploads
-      mountPath: /app/dev_uploads
-      sizeGB: 1
+   # Disk removed for free tier compatibility - version 2
+
